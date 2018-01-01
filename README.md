@@ -1,7 +1,7 @@
 # ![red rock](https://i.imgur.com/ikKvGG4.png) xeric
 A game engine written in Typescript
 
-## Status: _Current not usable. Under development._
+## Status: _Currently not usable. Under development._
 
 This work is a practical exercise of the information presented in Eric Lengyel's Foundations of Game Engine Development series.
 
