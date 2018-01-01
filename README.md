@@ -7,7 +7,7 @@ This work is a practical exercise of the information presented in Eric Lengyel's
 
 More information on the book is here: http://foundationsofgameenginedev.com/
 
-## Time line
+## Timeline
 
 Development began on 1st Jan 2018.
 
