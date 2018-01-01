@@ -1,4 +1,4 @@
-# ![https://i.imgur.com/ay0eWDB.png](red rock) xeric
+# ![red rock](https://i.imgur.com/ikKvGG4.png) xeric
 A game engine written in Typescript
 
 ## Not usable. Under development.
