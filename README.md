@@ -5,7 +5,7 @@ A game engine written in Typescript
 
 This work is a practical exercise of the information presented in Eric Lengyel's Foundations of Game Engine Development series.
 
-More information on the book is here: http://foundationsofgameenginedev.com/
+More information on the book series is here: http://foundationsofgameenginedev.com/
 
 ## Timeline
 
