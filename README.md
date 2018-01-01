@@ -3,7 +3,7 @@ A game engine written in Typescript
 
 ## Not usable. Under development.
 
-This work is a practical exercise of the information presented in Eric Lengyl's Foundations of Game Engine Development series.
+This work is a practical exercise of the information presented in Eric Lengyel's Foundations of Game Engine Development series.
 
 More information on the book is here: http://foundationsofgameenginedev.com/
 
