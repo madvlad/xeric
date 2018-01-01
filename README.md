@@ -1,5 +1,5 @@
 # ![red rock](https://i.imgur.com/ikKvGG4.png) xeric
-A game engine written in Typescript
+An open source, first-person, web and desktop targeted 3D game engine written in Typescript.
 
 ## Status: _Currently not usable. Under development._
 
