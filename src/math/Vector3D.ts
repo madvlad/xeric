@@ -1,4 +1,4 @@
-class Vector3D {
+export class Vector3D {
     public x: number;
     public y: number;
     public z: number;
