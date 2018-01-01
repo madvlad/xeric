@@ -15,7 +15,7 @@ The goal for having a usable protoype is Jun 2018.
 
 ## Dev Team
 
-The team currently consist of one person: (madvlad)[https://github.com/madvlad/]
+The team currently consist of one person: https://github.com/madvlad/
 
 ## No copyright
 
