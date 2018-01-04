@@ -25,6 +25,13 @@ export class Vector3D {
         return (a.x * b.x + a.y * b.y + a.z * b.z);
     }
 
+    crossProduct(b: Vector3D): Vector3D {
+        const a = this;
+        return new Vector3D(a.y * b.z - a.z * b.y,
+                            a.z * b.x - a.x * b.z,
+                            a.x * b.y - a.y * b.x);
+    }
+
     add(v: Vector3D): Vector3D {
         this.x += v.x;
         this.y += v.y;
