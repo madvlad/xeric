@@ -20,6 +20,11 @@ export class Vector3D {
         return this;
     }
 
+    dotProduct(b: Vector3D): number {
+        const a = this;
+        return (a.x * b.x + a.y * b.y + a.z * b.z);
+    }
+
     add(v: Vector3D): Vector3D {
         this.x += v.x;
         this.y += v.y;
