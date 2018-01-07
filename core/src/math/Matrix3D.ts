@@ -78,13 +78,26 @@ class Matrix3D {
     }
 
     makeRotationX(t: number) {
-        const c = Math.cos(t);
-        const s = Math.sin(t);
+        const a = this.defineCosAndSin(t);
 
         const vec1 = new Vector3D(1, 0, 0);
-        const vec2 = new Vector3D(0, c, -s);
-        const vec3 = new Vector3D(0, s, c);
+        const vec2 = new Vector3D(0, a[0], -a[1]);
+        const vec3 = new Vector3D(0, a[1], a[0]);
 
         return new Matrix3D(vec1, vec2, vec3);
+    }
+
+    makeRotationY(t: number) {
+        const a = this.defineCosAndSin(t);
+
+        const vec1 = new Vector3D(a[0], 0, a[1]);
+        const vec2 = new Vector3D(0, 1, 0);
+        const vec3 = new Vector3D(-a[1], 0, a[0]);
+
+        return new Matrix3D(vec1, vec2, vec3);
+    }
+
+    defineCosAndSin(angle: number): [number, number] {
+        return [Math.cos(angle), Math.sin(angle)];
     }
 }
