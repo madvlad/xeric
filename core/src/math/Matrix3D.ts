@@ -76,4 +76,15 @@ class Matrix3D {
                             a[1][0] * v.x + a[1][1] * v.y + a[1][2] + v.z,
                             a[2][0] * v.x + a[2][1] * v.y + a[2][2] + v.z);
     }
+
+    makeRotationX(t: number) {
+        const c = Math.cos(t);
+        const s = Math.sin(t);
+
+        const vec1 = new Vector3D(1, 0, 0);
+        const vec2 = new Vector3D(0, c, -s);
+        const vec3 = new Vector3D(0, s, c);
+
+        return new Matrix3D(vec1, vec2, vec3);
+    }
 }
