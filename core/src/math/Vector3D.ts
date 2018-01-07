@@ -55,6 +55,17 @@ export class Vector3D {
         return this.scalarDivide(vMag);
     }
 
+    project(b: Vector3D): Vector3D {
+        const a = this;
+        const c = a.dotProduct(b) / b.dotProduct(b);
+        return b.scalarMultiply(c);
+    }
+
+    reject(b: Vector3D): Vector3D {
+        const a = this;
+        return a.sub(a.reject(b));
+    }
+
     private multiplyMembers(s: number) {
         this.x *= s;
         this.y *= s;
