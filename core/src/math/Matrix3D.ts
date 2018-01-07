@@ -22,6 +22,13 @@ class Matrix3D {
         return new Vector3D(this.n[2][0], this.n[2][1], this.n[2][2]);
     }
 
+    determinant(): number {
+        const n = this.n;
+        return (n[0][0] * (n[1][1] * n[2][2] - n[1][2] * n[2][1]))
+            +  (n[0][1] * (n[1][2] * n[2][0] - n[1][0] * n[2][2]))
+            +  (n[0][2] * (n[1][0] * n[2][1] - n[1][1] * n[2][0]));
+    }
+
     multMatrix(bMatrix: Matrix3D): Matrix3D {
         const a  = this.n;
         const b = bMatrix.n;
