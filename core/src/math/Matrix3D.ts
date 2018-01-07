@@ -3,11 +3,18 @@ import { Vector3D } from './Vector3D'
 class Matrix3D {
     public n: number[][];
 
+    public a: Vector3D;
+    public b: Vector3D;
+    public c: Vector3D;
+
     constructor(a: Vector3D, b: Vector3D, c: Vector3D)
     {
         this.n[0][0] = a.x; this.n[0][1] = a.y; this.n[0][2] = a.z;
         this.n[1][0] = b.x; this.n[1][1] = b.y; this.n[1][2] = b.z;
         this.n[2][0] = c.x; this.n[2][1] = c.y; this.n[2][2] = c.z;
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
     
     getVectorA(): Vector3D {
@@ -27,6 +34,22 @@ class Matrix3D {
         return (n[0][0] * (n[1][1] * n[2][2] - n[1][2] * n[2][1]))
             +  (n[0][1] * (n[1][2] * n[2][0] - n[1][0] * n[2][2]))
             +  (n[0][2] * (n[1][0] * n[2][1] - n[1][1] * n[2][0]));
+    }
+
+    inverse(): Matrix3D {
+        const a = this.a; const b = this.b; const c = this.c;
+
+        const r0 = b.crossProduct(c);
+        const r1 = c.crossProduct(a);
+        const r2 = a.crossProduct(b);
+
+        let invDet = 1 / r2.dotProduct(c);
+
+        const vec1 = new Vector3D(r0.x * invDet, r0.y * invDet, r0.z * invDet);
+        const vec2 = new Vector3D(r1.x * invDet, r1.y * invDet, r1.z * invDet);
+        const vec3 = new Vector3D(r2.x * invDet, r2.y * invDet, r2.z * invDet);
+
+        return new Matrix3D(vec1, vec2, vec3);
     }
 
     multMatrix(bMatrix: Matrix3D): Matrix3D {
