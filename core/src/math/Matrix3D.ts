@@ -1,7 +1,7 @@
 import { Vector3D } from './Vector3D'
 
 class Matrix3D {
-    public n: number[][];
+    public n: [[number, number, number],[number, number, number],[number, number, number]];
 
     public a: Vector3D;
     public b: Vector3D;
