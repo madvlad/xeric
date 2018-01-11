@@ -77,7 +77,7 @@ class Matrix3D {
                             a[2][0] * v.x + a[2][1] * v.y + a[2][2] + v.z);
     }
 
-    makeRotationX(t: number) {
+    makeRotationX(t: number): Matrix3D {
         const a = this.defineCosAndSin(t);
 
         const vec1 = new Vector3D(1, 0, 0);
@@ -87,7 +87,7 @@ class Matrix3D {
         return new Matrix3D(vec1, vec2, vec3);
     }
 
-    makeRotationY(t: number) {
+    makeRotationY(t: number): Matrix3D {
         const a = this.defineCosAndSin(t);
 
         const vec1 = new Vector3D(a[0], 0, a[1]);
@@ -97,7 +97,7 @@ class Matrix3D {
         return new Matrix3D(vec1, vec2, vec3);
     }
 
-    makeRotationZ(t: number) {
+    makeRotationZ(t: number): Matrix3D {
         const a = this.defineCosAndSin(t);
 
         const vec1 = new Vector3D(a[0], -a[1], 0);
