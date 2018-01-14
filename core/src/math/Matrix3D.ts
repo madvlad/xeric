@@ -158,6 +158,14 @@ class Matrix3D {
         return new Matrix3D(vec1, vec2, vec3);
     }
 
+    makeScale(sx: number, sy: number, sz: number): Matrix3D {
+        const vec1 = new Vector3D(sx, 0, 0);
+        const vec2 = new Vector3D(0, sy, 0);
+        const vec3 = new Vector3D(0, 0, sz);
+
+        return new Matrix3D(vec1, vec2, vec3);
+    }
+
     defineCosAndSin(angle: number): [number, number] {
         return [Math.cos(angle), Math.sin(angle)];
     }
