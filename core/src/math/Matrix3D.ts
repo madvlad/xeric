@@ -126,7 +126,7 @@ class Matrix3D {
         return new Matrix3D(vec1, vec2, vec3);
     }
 
-    makeReflection(a: Vector3D) {
+    makeReflection(a: Vector3D): Matrix3D {
         const x = a.x * -2;
         const y = a.y * -2;
         const z = a.z * -2;
@@ -138,6 +138,22 @@ class Matrix3D {
         const vec1 = new Vector3D(x * a.x + 1, axay, axaz);
         const vec2 = new Vector3D(axay, y * a.y + 1, ayaz);
         const vec3 = new Vector3D(axaz, ayaz, z * a.z + 1);
+
+        return new Matrix3D(vec1, vec2, vec3);
+    }
+
+    makeInvolution(a: Vector3D): Matrix3D {
+        const x = a.x * 2;
+        const y = a.y * 2;
+        const z = a.z * 2;
+
+        const axay = x * a.y;
+        const axaz = x * a.z;
+        const ayaz = y * a.z;
+
+        const vec1 = new Vector3D(x * a.x - 1, axay, axaz);
+        const vec2 = new Vector3D(axay, y * a.y - 1, ayaz);
+        const vec3 = new Vector3D(axaz, ayaz, z * a.z - 1);
 
         return new Matrix3D(vec1, vec2, vec3);
     }
