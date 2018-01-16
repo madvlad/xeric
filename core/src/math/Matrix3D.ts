@@ -183,6 +183,19 @@ class Matrix3D {
         return new Matrix3D(vec1, vec2, vec3);
     }
 
+    makeSkew(t: number, a: Vector3D, b: Vector3D) {
+        t = Math.tan(t);
+        const x = a.x * t;
+        const y = a.y * t;
+        const z = a.z * t;
+
+        const vec1 = new Vector3D(x * b.x + 1, x * b.y, x * b.z);
+        const vec2 = new Vector3D(y * b.x, y * b.y + 1, y * b.z);
+        const vec3 = new Vector3D(z * b.x, z * b.y, z * b.z + 1);
+
+        return new Matrix3D(vec1, vec2, vec3);
+    }
+
     defineCosAndSin(angle: number): [number, number] {
         return [Math.cos(angle), Math.sin(angle)];
     }
