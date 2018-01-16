@@ -3,7 +3,9 @@ An open source, first-person, web and desktop targeted 3D game engine written in
 
 ## Status: _Currently not usable. Under development._
 
-This work is a practical exercise of the information presented in Eric Lengyel's Foundations of Game Engine Development series.
+## Sources
+
+The implimentations in the mathematical libraries of this repo are my TypeScript translations of Eric Lengyel's examples in volume 1 of his Foundations of Game Engine Development series.
 
 More information on the book series is here: http://foundationsofgameenginedev.com/
 
