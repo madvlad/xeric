@@ -19,6 +19,22 @@ export class Vector4D {
         return this;
     }
 
+    add(v: Vector4D): Vector4D {
+        this.x += v.x;
+        this.y += v.y;
+        this.z += v.z;
+        this.w += v.w;
+        return this;
+    }
+
+    sub(v: Vector4D): Vector4D {
+        this.x -= v.x;
+        this.y -= v.y;
+        this.z -= v.z;
+        this.w -= v.w;
+        return this;
+    }
+
     private multiplyMembers(s: number) {
         this.x *= s;
         this.y *= s;
