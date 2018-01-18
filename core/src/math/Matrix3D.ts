@@ -1,6 +1,6 @@
 import { Vector3D } from './Vector3D'
 
-class Matrix3D {
+export class Matrix3D {
     public n: [[number, number, number],[number, number, number],[number, number, number]];
 
     public a: Vector3D;
